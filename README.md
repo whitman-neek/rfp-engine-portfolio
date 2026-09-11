@@ -6,6 +6,23 @@ RFP Engine combines LLM-based agents with deterministic workflow controls, persi
 
 > This public repository documents the product, architecture, governance model, and development progress. The active application source remains in a separate private development repository while the project is prepared for a safe public release.
 
+## Latest development milestone — September 11, 2026
+
+The full-stack application is now running locally across its Next.js interface, FastAPI service, PostgreSQL persistence layer, and durable artifact store. End-to-end acceptance testing has progressed from multi-document opportunity intake through structured analysis and decomposition to the controlled drafting boundary.
+
+Recent engineering work includes:
+
+- an operational opportunity workspace with upload, processing, workflow status, and review visibility;
+- deterministic execution through the intake, qualification, and decomposition stages;
+- successful arrival at the component-level drafting gate in a representative acceptance test;
+- a compatibility projection for model-facing structured-output schemas while preserving authoritative post-generation validation;
+- recovery and preparation of the remaining drafting, review, package, authorization, and closeout pipeline for application integration; and
+- continued separation of model-generated work from engine-owned persistence, validation, routing, and human authority.
+
+Current work is focused on integrating the remaining pipeline, exercising hold-and-resume behavior, and validating the complete lifecycle through review, package assembly, authorization, and closeout.
+
+See the [development log](docs/development-log.md) for dated milestones.
+
 ## The problem
 
 Proposal teams do not merely need faster text generation. They need a system that can:
@@ -110,6 +127,7 @@ Read the [regression testing story](docs/regression-testing.md) for representati
 ## Documentation
 
 - [Architecture and control boundaries](docs/architecture.md)
+- [Development log](docs/development-log.md)
 - [Regression testing](docs/regression-testing.md)
 - [Portfolio and competency map](docs/portfolio-guide.md)
 - [Public data policy](PUBLIC_DATA_POLICY.md)
@@ -117,7 +135,7 @@ Read the [regression testing story](docs/regression-testing.md) for representati
 
 ## Current status
 
-The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. Current work is focused on application hardening, safe synthetic demonstration data, end-to-end testing, deployment, authentication, and portfolio presentation.
+The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. The current acceptance-testing path has reached the controlled drafting boundary. Current work is focused on integrating and validating the remaining pipeline, safe synthetic demonstration data, deployment, authentication, and portfolio presentation.
 
 ## Author
 
