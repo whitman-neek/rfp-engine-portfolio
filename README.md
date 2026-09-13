@@ -8,17 +8,17 @@ RFP Engine combines LLM-based agents with deterministic workflow controls, persi
 
 ## Latest development milestone — September 13, 2026
 
-The live acceptance path now advances safely into an explicit information hold rather than failing or inventing missing evidence. The persisted opportunity moved through intake and structured analysis to `AWAITING_INFORMATION`, demonstrating that the controller can commit progress and stop at a governed human boundary.
+The package-input inventory is now integrated into the opportunity workspace and covered by a focused 11-test regression set. The engine can surface required package values early, accept reviewed resolutions, preserve their source lineage, and report their status through the workspace rather than discovering missing submission inputs only during final assembly.
 
 Recent engineering work includes:
 
-- successful persistence of the next authoritative opportunity revision after model-backed processing;
-- explicit separation between a valid workflow hold and an application error;
-- exposed routes for supplying human decisions or additional source material before execution resumes;
-- validation of the local PostgreSQL-backed runtime and bundle test suite; and
-- completion of a knowledge-approval workspace design and implementation package for governing reusable content before it enters retrieval and drafting.
+- deterministic inventory of required package inputs before package assembly;
+- reviewed-value resolution without losing the originating requirement or evidence trail;
+- workspace visibility into unresolved and resolved package-input status;
+- correction of a domain-model/UI contract mismatch identified by regression testing; and
+- 11 passing targeted tests covering package-input inventory, resolution, lineage, and workspace behavior.
 
-The knowledge-governance workflow is designed to let authorized reviewers inspect provenance, edit candidate content, approve or reject it, and preserve the decision record. Current work is focused on wiring that interface into the application and continuing the end-to-end acceptance path through drafting and review.
+This closes an important operational gap: administrative fields and submission-form values can now be identified and governed earlier in the pursuit lifecycle, with the final package still tied to reviewed inputs and traceable sources.
 
 See the [development log](docs/development-log.md) for dated milestones.
 
@@ -83,6 +83,7 @@ flowchart TD
 - Governed knowledge-approval workspace design for reusable content
 - Component-scoped drafting status and evidence gaps
 - Pink and Red review execution with correction loops
+- Early package-input inventory with reviewed-value resolution and lineage
 - Candidate Package Assembly and deterministic proposal rendering
 - Gold review bound to an exact package version
 - Explicit final submission authorization
@@ -135,7 +136,7 @@ Read the [regression testing story](docs/regression-testing.md) for representati
 
 ## Current status
 
-The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. The live acceptance path now persists authoritative state through an explicit information hold, and the next application increment adds human approval controls for reusable knowledge. Current work is focused on integrating that governance interface and validating the remaining drafting-through-closeout pipeline.
+The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. The latest build adds tested, workspace-visible package-input governance so required administrative values can be resolved before final assembly. Current work is focused on continuing the live acceptance path and validating the remaining drafting-through-closeout operations.
 
 ## Author
 
