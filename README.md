@@ -6,20 +6,19 @@ RFP Engine combines LLM-based agents with deterministic workflow controls, persi
 
 > This public repository documents the product, architecture, governance model, and development progress. The active application source remains in a separate private development repository while the project is prepared for a safe public release.
 
-## Latest development milestone — September 11, 2026
+## Latest development milestone — September 13, 2026
 
-The full-stack application is now running locally across its Next.js interface, FastAPI service, PostgreSQL persistence layer, and durable artifact store. End-to-end acceptance testing has progressed from multi-document opportunity intake through structured analysis and decomposition to the controlled drafting boundary.
+The live acceptance path now advances safely into an explicit information hold rather than failing or inventing missing evidence. The persisted opportunity moved through intake and structured analysis to `AWAITING_INFORMATION`, demonstrating that the controller can commit progress and stop at a governed human boundary.
 
 Recent engineering work includes:
 
-- an operational opportunity workspace with upload, processing, workflow status, and review visibility;
-- deterministic execution through the intake, qualification, and decomposition stages;
-- successful arrival at the component-level drafting gate in a representative acceptance test;
-- a compatibility projection for model-facing structured-output schemas while preserving authoritative post-generation validation;
-- recovery and preparation of the remaining drafting, review, package, authorization, and closeout pipeline for application integration; and
-- continued separation of model-generated work from engine-owned persistence, validation, routing, and human authority.
+- successful persistence of the next authoritative opportunity revision after model-backed processing;
+- explicit separation between a valid workflow hold and an application error;
+- exposed routes for supplying human decisions or additional source material before execution resumes;
+- validation of the local PostgreSQL-backed runtime and bundle test suite; and
+- completion of a knowledge-approval workspace design and implementation package for governing reusable content before it enters retrieval and drafting.
 
-Current work is focused on integrating the remaining pipeline, exercising hold-and-resume behavior, and validating the complete lifecycle through review, package assembly, authorization, and closeout.
+The knowledge-governance workflow is designed to let authorized reviewers inspect provenance, edit candidate content, approve or reject it, and preserve the decision record. Current work is focused on wiring that interface into the application and continuing the end-to-end acceptance path through drafting and review.
 
 See the [development log](docs/development-log.md) for dated milestones.
 
@@ -81,6 +80,7 @@ flowchart TD
 - Deterministic controller execution and schema validation
 - Structured, model-backed agent invocation
 - Human hold-and-resume workflows
+- Governed knowledge-approval workspace design for reusable content
 - Component-scoped drafting status and evidence gaps
 - Pink and Red review execution with correction loops
 - Candidate Package Assembly and deterministic proposal rendering
@@ -135,7 +135,7 @@ Read the [regression testing story](docs/regression-testing.md) for representati
 
 ## Current status
 
-The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. The current acceptance-testing path has reached the controlled drafting boundary. Current work is focused on integrating and validating the remaining pipeline, safe synthetic demonstration data, deployment, authentication, and portfolio presentation.
+The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. The live acceptance path now persists authoritative state through an explicit information hold, and the next application increment adds human approval controls for reusable knowledge. Current work is focused on integrating that governance interface and validating the remaining drafting-through-closeout pipeline.
 
 ## Author
 
