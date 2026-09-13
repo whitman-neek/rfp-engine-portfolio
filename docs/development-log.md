@@ -2,6 +2,30 @@
 
 This log records sanitized product and engineering milestones. It intentionally excludes source solicitations, customer information, proprietary knowledge, pricing, credentials, private prompts, and implementation source from the active private repository.
 
+## September 13, 2026 — Package-input inventory reaches tested workspace integration
+
+### Delivered
+
+- Added deterministic early discovery of values required for final package production.
+- Integrated unresolved and reviewed package-input status into the persistent opportunity workspace.
+- Added reviewed-value resolution that retains the originating requirement and evidence lineage.
+- Preserved the separation between user-supplied values, reviewed resolutions, and generated proposal content.
+
+### Regression result
+
+A focused package-input regression set now passes all 11 tests. During testing, a mismatch between the resolution domain object and its workspace consumer was caught and corrected, confirming that the tests exercise the application boundary rather than only isolated storage behavior.
+
+### Why it matters
+
+Final forms often contain administrative fields that ordinary requirements analysis misses. Discovering those values during final assembly creates avoidable submission risk. The engine now identifies them earlier, makes their status visible, and carries reviewed values forward with traceable lineage.
+
+### Next
+
+- Exercise the inventory and resolution workflow inside the live acceptance opportunity.
+- Continue the controlled drafting and review path.
+- Verify that package assembly consumes only the correct reviewed values.
+- Validate that later changes invalidate affected package readiness when required.
+
 ## September 13, 2026 — Controlled information hold and knowledge governance
 
 ### Acceptance result
