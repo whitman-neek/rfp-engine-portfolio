@@ -21,8 +21,13 @@ Last updated: September 13, 2026
 - [x] Preserve authoritative validation while adapting model-facing schemas
 - [x] Persist and surface a controlled information hold during live acceptance testing
 - [x] Expose human-input and additional-source continuation paths
+- [x] Inventory required package inputs before final assembly
+- [x] Resolve reviewed package values while preserving lineage
+- [x] Surface package-input status in the opportunity workspace
+- [x] Pass the focused 11-test package-input regression set
 - [ ] Integrate and validate the remaining drafting-through-closeout pipeline
 - [ ] Complete end-to-end hold, resume, review, package, and authorization testing
+- [ ] Exercise package-input resolution in the live acceptance opportunity
 
 ## Knowledge governance
 
