@@ -1,6 +1,6 @@
 # Roadmap
 
-Last updated: September 11, 2026
+Last updated: September 13, 2026
 
 ## Portfolio release
 
@@ -19,8 +19,18 @@ Last updated: September 11, 2026
 - [x] Execute intake, qualification, and decomposition in the application
 - [x] Reach the controlled component-drafting boundary in acceptance testing
 - [x] Preserve authoritative validation while adapting model-facing schemas
+- [x] Persist and surface a controlled information hold during live acceptance testing
+- [x] Expose human-input and additional-source continuation paths
 - [ ] Integrate and validate the remaining drafting-through-closeout pipeline
 - [ ] Complete end-to-end hold, resume, review, package, and authorization testing
+
+## Knowledge governance
+
+- [x] Define the knowledge-approval workspace and reviewer decision model
+- [x] Prepare the interface implementation package
+- [ ] Wire approval, rejection, editing, provenance, and decision history into the application
+- [ ] Validate that only approved reusable content is eligible for governed retrieval
+- [ ] Add regression coverage for approval-state and stale-revision controls
 
 ## Application hardening
 
@@ -42,5 +52,5 @@ Last updated: September 11, 2026
 ## Later-stage work
 
 - [ ] Calibrate pricing support against approved historical benchmarks
-- [ ] Expand retrieval governance and reusable-content approval
+- [ ] Expand reusable-content lifecycle management and policy configuration
 - [ ] Add organization-specific policy and authority configuration
