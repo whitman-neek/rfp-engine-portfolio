@@ -1,6 +1,6 @@
 # Roadmap
 
-Last updated: September 13, 2026
+Last updated: September 21, 2026
 
 ## Portfolio release
 
@@ -25,6 +25,13 @@ Last updated: September 13, 2026
 - [x] Resolve reviewed package values while preserving lineage
 - [x] Surface package-input status in the opportunity workspace
 - [x] Pass the focused 11-test package-input regression set
+- [x] Project Agent 4 output onto controller-owned requirement IDs
+- [x] Preserve complete traceability across a 104-requirement replay
+- [x] Route blocking evidence gaps to the affected drafting component
+- [x] Preserve nonblocking gaps without halting unrelated drafting
+- [x] Treat unsupported model coverage as not assessed
+- [ ] Resolve the remaining evidence-bound drafting component
+- [ ] Advance the validated replay into Pink review
 - [ ] Integrate and validate the remaining drafting-through-closeout pipeline
 - [ ] Complete end-to-end hold, resume, review, package, and authorization testing
 - [ ] Exercise package-input resolution in the live acceptance opportunity
