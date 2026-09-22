@@ -2,6 +2,33 @@
 
 This log records sanitized product and engineering milestones. It intentionally excludes source solicitations, customer information, proprietary knowledge, pricing, credentials, private prompts, and implementation source from the active private repository.
 
+## September 21, 2026 — Authoritative traceability and component-scoped drafting
+
+### Delivered
+
+- Updated the drafting controller to project model output onto authoritative requirement identifiers.
+- Prevented model-local identifiers from becoming the system of record.
+- Preserved a complete 104-requirement traceability inventory in a representative replay.
+- Classified four evaluation criteria as controller-only controls rather than draftable response requirements.
+- Routed six blocking requirements to the affected response component.
+- Retained two nonblocking evidence gaps without falsely claiming coverage or stopping unrelated work.
+- Standardized missing defensible coverage as `not_assessed`.
+
+### Regression result
+
+The targeted Agent 4 regression suite passes after adding coverage for authoritative-ID projection and least-permissive gap handling. The replay now reaches the drafting-input hold for the genuinely blocked component while preserving completed work and traceability elsewhere.
+
+### Why it matters
+
+A drafting model should not control requirement identity or decide that missing evidence applies to the entire proposal. The controller now owns both decisions. This reduces false coverage, prevents one component's evidence problem from contaminating unrelated work, and gives reviewers a stable requirement-to-component audit trail.
+
+### Next
+
+- Supply or formally resolve the remaining component-specific evidence gaps.
+- Resume drafting from the persisted hold.
+- Carry the authoritative traceability inventory into Pink review.
+- Confirm that correction loops preserve requirement identity and component lineage.
+
 ## September 13, 2026 — Package-input inventory reaches tested workspace integration
 
 ### Delivered
