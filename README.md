@@ -6,19 +6,20 @@ RFP Engine combines LLM-based agents with deterministic workflow controls, persi
 
 > This public repository documents the product, architecture, governance model, and development progress. The active application source remains in a separate private development repository while the project is prepared for a safe public release.
 
-## Latest development milestone — September 13, 2026
+## Latest development milestone — September 21, 2026
 
-The package-input inventory is now integrated into the opportunity workspace and covered by a focused 11-test regression set. The engine can surface required package values early, accept reviewed resolutions, preserve their source lineage, and report their status through the workspace rather than discovering missing submission inputs only during final assembly.
+Agent 4 drafting now operates against controller-owned requirement identities rather than model-invented local identifiers. In the latest representative replay, the engine preserved a complete 104-requirement traceability set, classified evaluation-only controls separately, routed blocking evidence gaps to the affected response component, and allowed nonblocking gaps to remain visible without overstating coverage.
 
 Recent engineering work includes:
 
-- deterministic inventory of required package inputs before package assembly;
-- reviewed-value resolution without losing the originating requirement or evidence trail;
-- workspace visibility into unresolved and resolved package-input status;
-- correction of a domain-model/UI contract mismatch identified by regression testing; and
-- 11 passing targeted tests covering package-input inventory, resolution, lineage, and workspace behavior.
+- deterministic projection of drafting results onto authoritative `REQ-*` identifiers;
+- complete mapping of 104 requirements in the replay traceability inventory;
+- explicit `not_assessed` treatment when the model does not provide defensible coverage;
+- component-scoped routing of six blocking requirements to the affected drafting component;
+- preservation of two nonblocking evidence gaps for later resolution; and
+- regression coverage confirming that non-drafting gaps do not unnecessarily halt unrelated drafting.
 
-This closes an important operational gap: administrative fields and submission-form values can now be identified and governed earlier in the pursuit lifecycle, with the final package still tied to reviewed inputs and traceable sources.
+The result is a stronger separation between what the model proposes and what the controller accepts: coverage, gaps, and workflow consequences are all tied back to the authoritative requirement inventory.
 
 See the [development log](docs/development-log.md) for dated milestones.
 
@@ -81,6 +82,7 @@ flowchart TD
 - Structured, model-backed agent invocation
 - Human hold-and-resume workflows
 - Governed knowledge-approval workspace design for reusable content
+- Controller-projected requirement traceability using authoritative requirement IDs
 - Component-scoped drafting status and evidence gaps
 - Pink and Red review execution with correction loops
 - Early package-input inventory with reviewed-value resolution and lineage
@@ -136,7 +138,7 @@ Read the [regression testing story](docs/regression-testing.md) for representati
 
 ## Current status
 
-The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. The latest build adds tested, workspace-visible package-input governance so required administrative values can be resolved before final assembly. Current work is focused on continuing the live acceptance path and validating the remaining drafting-through-closeout operations.
+The application has a working full-stack foundation and an implemented controlled lifecycle from upload through submission closeout. The latest acceptance replay demonstrates authoritative requirement traceability and component-scoped drafting holds across a 104-requirement inventory. Current work is focused on resolving the remaining evidence-bound component and advancing the validated package into Pink review.
 
 ## Author
 
